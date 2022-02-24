@@ -36,7 +36,7 @@ const managerInput = () => {
         const {name, id, email, officeNumber} = response;
         const manager = new Manager (name, id, email, officeNumber);
 
-        console.log(manager)
+        //console.log(manager)
         myTeam.push(manager);
     })
 };
@@ -84,8 +84,7 @@ const addEmployee = () => {
             default: false
         }
     ])
-    .then(response => {
-        // data for employee types 
+    .then(response => { 
 
         let { name, id, email, role, github, school, addTeamMembers } = response; 
         let employee; 
@@ -93,12 +92,8 @@ const addEmployee = () => {
         if (role === "Engineer") {
             employee = new Engineer (name, id, email, github);
 
-            console.log(employee);
-
         } else if (role === "Intern") {
             employee = new Intern (name, id, email, school);
-
-            console.log(employee);
         }
 
         myTeam.push(employee); 

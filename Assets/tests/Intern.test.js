@@ -33,7 +33,7 @@ describe('Intern', () => {
         expect(typeof intern.school).toBe('string');
     })
 
-    //  4°
+    //  5°
     it('Should accept all parameters and create Intern Object correctly', () => {
         const intern = new Intern('Enoc', 78, 'rojiyoyo@gmail.com', 'Tec de Monterrey');
         expect(typeof intern.name).toBe('string');
@@ -41,7 +41,7 @@ describe('Intern', () => {
         expect(intern.email).toContain('@');
     });
 
-    //  5°
+    //  6°
     it('Should log the role as Intern for this class Constructor', () =>{
         const intern = new Intern('Enoc', 78, 'rojiyoyo@gmail.com', 'Tec de Monterrey');
 

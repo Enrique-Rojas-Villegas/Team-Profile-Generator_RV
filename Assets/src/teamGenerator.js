@@ -1,23 +1,18 @@
 const managerGenerator = function (manager) {
     return `
-    <div
-      style="height: 100px"
-      class="row justify-content-center align-items-center"
-    >
-      <div class="card col-6 col-sm-5 col-lg-3 p-0">
-        <h3 class="card-header text-center">
+      <div class="card col-5 col-sm-5 col-lg-3 p-0">
+        <h3 class="card-header text-center manager">
           Manager <br />
           ${manager.name}
         </h3>
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: <h4>${manager.id}</h4></li>
-            <li class="list-group-item">Email:${manager.email}</li>
+            <li class="list-group-item">Email:<a href="mailto:${manager.email}">${manager.email}</a></li>
             <li class="list-group-item">Office Number:${manager.officeNumber}</li>
           </ul>
         </div>
       </div>
-    </div>
     `;
 }
 
@@ -25,24 +20,19 @@ const managerGenerator = function (manager) {
 const generateEngineer = function (engineer) {
   return `
   <!-- Engineer Card -->
-    <div
-      style="height: 100px"
-      class="row justify-content-center align-items-center"
-    >
-      <div class="card col-6 col-sm-5 col-lg-3 p-0">
-        <h3 class="card-header text-center">
+      <div class="card col-5 col-sm-5 col-lg-3 p-0">
+        <h3 class="card-header text-center engineer">
           Engineer <br />
           ${engineer.name}
         </h3>
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID:${engineer.id}</li>
-            <li class="list-group-item">Email:${engineer.email}</li>
+            <li class="list-group-item">Email:<a href="mailto:${engineer.email}">${engineer.email}</a></li>
             <li class="list-group-item">GitHub:${engineer.github}</li>
           </ul>
         </div>
       </div>
-    </div>
   `
 }
 
@@ -50,24 +40,19 @@ const generateEngineer = function (engineer) {
 const generateIntern = function (intern) {
   return `
   <!-- Intern Card -->
-    <div
-      style="height: 100px"
-      class="row justify-content-center align-items-center"
-    >
-      <div class="card col-6 col-sm-5 col-lg-3 p-0">
-        <h3 class="card-header text-center">
+      <div class="card col-5 col-sm-5 col-lg-3 p-0">
+        <h3 class="card-header text-center intern">
           Intern <br />
           ${intern.name}
         </h3>
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID:${intern.id}</li>
-            <li class="list-group-item">Email:${intern.email}</li>
+            <li class="list-group-item">Email:<a href="mailto:${intern.email}">${intern.email}</a></li>
             <li class="list-group-item">School:${intern.school}</li>
           </ul>
         </div>
       </div>
-    </div>
   `
 };
 
@@ -131,8 +116,13 @@ const genTeam = function (allEmployeesInfo) {
   </head>
   <header>My Team</header>
   <!-- Manager Card -->
-  <div class="container">
+  <div class="container mt-4">
+  <div
+      style="height: 300px"
+      class="row justify-content-center align-items-center gap-3"
+    >
     ${allEmployeesInfo}
+    </div>
     <!-- Container div ends here -->
   </div>
   <body>
