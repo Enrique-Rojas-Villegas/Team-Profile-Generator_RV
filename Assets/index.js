@@ -53,28 +53,28 @@ const addEmployee = () => {
         {
             type: 'input',
             name: 'name',
-            message: "What's the name of the employee?", 
+            message: "Please enter the name: ", 
         },
         {
             type: 'input',
             name: 'id',
-            message: "Please enter the employee's ID.",
+            message: "Enter the corresponding ID: ",
         },
         {
             type: 'input',
             name: 'email',
-            message: "Please enter the employee's email.",
+            message: "Enter the corresponding email: ",
         },
         {
             type: 'input',
             name: 'github',
-            message: "Please enter the employee's github username.",
+            message: "Enter the associated GitHub User: ",
             when: (input) => input.role === "Engineer",
         },
         {
             type: 'input',
             name: 'school',
-            message: "Please enter the intern's school",
+            message: "Enter where school you are from: ",
             when: (input) => input.role === "Intern",
         },
         {
@@ -84,10 +84,10 @@ const addEmployee = () => {
             default: false
         }
     ])
-    .then(employeeData => {
+    .then(response => {
         // data for employee types 
 
-        let { name, id, email, role, github, school, confirmAddEmployee } = employeeData; 
+        let { name, id, email, role, github, school, addTeamMembers } = response; 
         let employee; 
 
         if (role === "Engineer") {
