@@ -7,7 +7,7 @@ const managerGenerator = function (manager) {
         </h3>
         <div class="card-body">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: <h4>${manager.id}</h4></li>
+            <li class="list-group-item">ID:${manager.id}</li>
             <li class="list-group-item">Email:<a href="mailto:${manager.email}">${manager.email}</a></li>
             <li class="list-group-item">Office Number:${manager.officeNumber}</li>
           </ul>

@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  background-color: #f4a259;
+}
+
+body {
+  background-color: #fff;
+}
+
+.manager {
+  background-color: #f79824;
+}
+
+.engineer {
+  background-color: #fdca40;
+}
+
+.intern {
+  background-color: #2176ff;
+}
