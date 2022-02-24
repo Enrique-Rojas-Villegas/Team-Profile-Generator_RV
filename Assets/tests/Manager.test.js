@@ -35,7 +35,7 @@ describe('Manager', () => {
         expect(employee.officeNumber).toEqual(expect.any(Number));
     });
 
-    it('Should log the role as Employee for this class Constructor', () =>{
+    it('Should log the role as Manager for this class Constructor', () =>{
         const employee = new Manager('Enoc', 78, 'rojiyoyo@gmail.com');
 
         expect(employee.getRole()).toBe('Manager');
