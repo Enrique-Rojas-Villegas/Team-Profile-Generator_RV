@@ -1,3 +1,4 @@
+//we create a function to generate a card for our manager, and accepts as parameter our new manager object. 
 const managerGenerator = function (manager) {
     return `
       <div class="card col-5 col-sm-5 col-lg-3 p-0">
@@ -16,7 +17,7 @@ const managerGenerator = function (manager) {
     `;
 }
 
-// create Engineer card
+// We create a fucntion to generate our Engineer card, accepting our new engineer object created. 
 const generateEngineer = function (engineer) {
   return `
   <!-- Engineer Card -->
@@ -36,7 +37,7 @@ const generateEngineer = function (engineer) {
   `
 }
 
-// create Intern card 
+// We create a function to generate our Intern card, accepting our new intern object created. 
 const generateIntern = function (intern) {
   return `
   <!-- Intern Card -->
@@ -56,7 +57,8 @@ const generateIntern = function (intern) {
   `
 };
 
-
+//We make a module to accet information from our team. 
+//We create an arra empty, to the push our data. 
 HTMLGenerator = (info) => {
 
     fullTeam = [];
@@ -65,18 +67,19 @@ HTMLGenerator = (info) => {
         const employee = info[i];
         const role = employee.getRole();
 
+        //we use if to check again the role and make the correct card. 
         if(role === 'Manager'){
             const managerInfo = managerGenerator(employee);
+            //we then add it to the array fullTeam.
             fullTeam.push(managerInfo);
         }
-        // call engineer function
+
         if (role === 'Engineer') {
           const engInfo = generateEngineer(employee);
 
           fullTeam.push(engInfo);
       }
 
-      // call intern function 
       if (role === 'Intern') {
           const internInfo = generateIntern(employee);
 
@@ -88,8 +91,11 @@ HTMLGenerator = (info) => {
 
     const TeamGen = genTeam(allEmployeesInfo);
     return TeamGen;
+    //we then return our new array to our other function genTEam. 
 }
 
+
+//Here is where the rest of the HTML is generated and we only add our new array with literals.
 const genTeam = function (allEmployeesInfo) {
     return`
     <!DOCTYPE html>
@@ -137,4 +143,6 @@ const genTeam = function (allEmployeesInfo) {
     ` 
 };
 
+//here we esport our module to use as promise in the index file. 
+//And to access any properties declared here. 
 module.exports = HTMLGenerator; 
