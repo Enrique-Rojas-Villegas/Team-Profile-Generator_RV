@@ -46,7 +46,7 @@ Provide instructions for use:
 
     run and npm i to install dependencies, then invoke the app from your terminal using "node index.js"
 
-## [![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributing
 
